@@ -16,8 +16,8 @@ class AccountCreate(BasePage):
         submit_button = self.find_and_scroll_to_element(submit_button_locator)
         submit_button.click()
 
-    def verify_valid_form(self):
-        assert self.driver.current_url == 'https://magento.softwaretestingboard.com/customer/account/'
+    def verify_valid_form(self, page_url):
+        assert self.driver.current_url == page_url
 
     def verify_invalid_form(self, text):
         first_name_error = self.find_and_scroll_to_element(error_first_name_locator)

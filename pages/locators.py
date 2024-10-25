@@ -10,7 +10,7 @@ password_confirmation_locator = (By.ID, 'password-confirmation')
 submit_button_locator = (By.CSS_SELECTOR, '[title="Create an Account"]')
 error_first_name_locator = (By.ID, 'firstname-error')
 
-filter_header = (By.CLASS_NAME, 'filter-subtitle')
+sorting_title = (By.CLASS_NAME, 'sorter-label')
 product_item = (By.CLASS_NAME, 'product-item-link')
 
 compare_products = (By.ID, 'block-compare-heading')
