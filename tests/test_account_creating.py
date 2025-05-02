@@ -4,11 +4,12 @@ import pytest
 
 login_page_url = 'https://magento.softwaretestingboard.com/customer/account/'
 
+@pytest.mark.smoke
 def test_title_is_presented(account_creating):
     account_creating.open_page()
     account_creating.verify_header_text('Create New Customer Account')
 
-
+@pytest.mark.regression
 def test_valid_form(account_creating):
     account_creating.open_page()
     account_creating.fill_form('first', 'last', f'123456{random.randint(1, 100)}@123.tt', 'Qwe123!@#')
